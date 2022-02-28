@@ -2,25 +2,58 @@ body {
     background-color: blanchedalmond;
     color: darkgray;
     text-align: center;
+    margin-top: 40px;
 }
 #top-nav {
+    overflow: hidden;
+    position: fixed;
+    background-color: darkgrey;
+    top: 0;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    text-align: center;
 }
-ul {
+#nav-ul {
     display: flex;
+    margin-top: 5px;
     flex-direction: row;
     justify-content: space-evenly;
     
 }
 .nav-links {
     list-style: none;
+    
 }
 a:link, a:visited {
-    background-color: blanchedalmond;
-    color: darkgrey;
+    background-color: darkgrey;
+    color: white;
     text-decoration: none;
    
-  }
+}
   
-  a:hover, a:active {
+a:hover, a:active {
     color: blue ;
+}
+img{
+      height: 75px;
+      width: 60px;
+}
+header {
+      background-color: slateblue;
+}
+#bio {
+      background-color: steelblue;
+}
+#resume {
+      background-color: blueviolet;
   }
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+      background-color: steelblue;
+}
+.project-links {
+    list-style: none;
+}
