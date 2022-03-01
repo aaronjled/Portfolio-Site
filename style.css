@@ -61,3 +61,18 @@ header {
 .project-links {
     list-style: none;
 }
+#slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    
+}
+.slides img {
+    width: 50%;
+    height: 500px;
+}
+.fade {
+    animation: ease-out;
+    animation-duration: 1s;
+    opacity: .5 1;
+}
