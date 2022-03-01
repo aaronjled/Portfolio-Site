@@ -1,16 +1,40 @@
 console.log('Hello World')
-const slides = document.querySelectorAll('.slides');
-const slideNumber = 0
-slideshow();
-const slideshow = (slides) => {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+let slidePosition = 0;
+const slides = document.getElementsByClassName('slide');
+const totalSlides = slides.length;
+const next = document.getElementById('next').addEventListener("click", () => {
+    moveToNextSlide();
+})
+document.getElementById('prev').addEventListener("click", () => {
+    moveToPrevSlide();
+})
+const updateSlidePosition = () => {
+    for (let slide of slides) {
+        console.log(slide);
+        slide.classList.remove('slide--visible');
+        slide.classList.add('slide--hidden');
     }
-    slideNumber++;
-    if(slideNumber > slides.length) {
-        slideNumber = 1
+    slides[slidePosition].classList.remove('slide--hidden');
+    slides[slidePosition].classList.add('slide--visible');
+}
+const moveToNextSlide = () => {
+    updateSlidePosition();
+    console.log('hello next');
+    if(slidePosition === totalSlides -1) {
+        slidePosition = 0;
     }
-    slides[slideNumber-1].style.display = "block";
-    setTimeout(slideshow, 1500);
-    
+    else {
+        slidePosition++;
+    }
+    updateSlidePosition();
+}
+const moveToPrevSlide = () => {
+    updateSlidePosition();
+    console.log('hello prev');
+    if(slidePosition === 0) {
+        slidePosition = 0;
+    }
+    else {
+        slidePosition--;
+    }
 }
