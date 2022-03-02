@@ -30,7 +30,7 @@ const moveToNextSlide = () => {
 const moveToPrevSlide = () => {
     updateSlidePosition();
     if(slidePosition === 0) {
-        slidePosition = 0;
+        slidePosition = slides.length -1;
     }
     else {
         slidePosition--;

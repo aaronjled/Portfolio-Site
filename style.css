@@ -100,10 +100,6 @@ a:link, a:visited {
 a:hover, a:active {
     color: purple ;
 }
-img{
-      height: 75px;
-      width: 60px;
-}
 header {
       background-color: steelblue;
 }
@@ -209,10 +205,11 @@ header {
 }
 .carousel img {
     display: block;
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    margin-left: 25%;
 }
 .carousel .slide--visible {
     display: block;
@@ -262,5 +259,8 @@ header {
 }
 .soc-links {
     color: rgba(255, 255, 255);
+    list-style: none;
+}
+.page_links {
     list-style: none;
 }
