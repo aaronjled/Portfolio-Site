@@ -45,7 +45,7 @@ a {
     height: 3px;
     margin: 5px auto;
     transition: all .3s ease-in-out;
-    background-color: rgba(0,0,0);  
+    background-color: white;  
 }
 @media(max-width:768px) {
     .hamburger{
@@ -60,15 +60,25 @@ a {
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
+    #top-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 24px;
+
+    }
     #nav-ul{
         position: fixed;
-        left: -100%;
-        top: 0;
-        width: 100%;
+        display: flex;
+        left: -150%;
+        top: 15px;
+        width: 90%;
         flex-direction: row;
-        background-color: darkgrey;
+        background-color: steelblue;
         text-align: center;
         transition: .3s;
+        gap: 0;
     }
     .nav-links {
         margin: 16xp 0;
