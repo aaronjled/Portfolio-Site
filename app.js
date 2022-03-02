@@ -19,7 +19,6 @@ const updateSlidePosition = () => {
 }
 const moveToNextSlide = () => {
     updateSlidePosition();
-    console.log('hello next');
     if(slidePosition === totalSlides -1) {
         slidePosition = 0;
     }
@@ -30,7 +29,6 @@ const moveToNextSlide = () => {
 }
 const moveToPrevSlide = () => {
     updateSlidePosition();
-    console.log('hello prev');
     if(slidePosition === 0) {
         slidePosition = 0;
     }
@@ -46,3 +44,8 @@ hamburger.addEventListener("click", () => {
     topNav.classList.toggle("active");
 })
 document.querySelectorAll(".nav-links").forEach(n => n.addEventListener)
+
+const $card = document.querySelector('.card_inner');
+$card.addEventListener('click', () => {
+    $card.classList.toggle('is-flipped');
+})

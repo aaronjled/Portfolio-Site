@@ -1,11 +1,8 @@
-# Portfolio-Site
-Portfolio Site
-Have the following pages:
-home (greeting page)
-bio (your background)
-resume (past work experience)
-projects (a place to hold interesting projects that you build)
-links (links to your github, linkedin, and other sites you find interesting)
-optionally, instead of making this a separate page, you can make these links appear as part of a navigation section that appears on all pages
-Use JS/JQuery to create at least three points of interaction for the user (e.g. the user clicks on something and something happens). Write these from scratch. Use of 3rd party frameworks/libraries like jQuery UI, bootstrap, etc will not be allowed for this requirement!
-Implement responsive design (i.e. it should be fully functional on desktop, tablet, mobile, etc.).
+# Portfolio-Site - https://aaronjled.github.io/Portfolio-Site/
+What was used:
+HTML (Hypertext Markup Language) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. 
+CSS (Cascading Style Sheets) is the code that styles web content.
+JavaScript is a programming language that can add interactivity to a website. It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).
+Approach:
+I started out by drafting a mock up of what I wanted the finished product to look like, and then started from there with some basic HTML and CSS. After building a basic layout I sent into the harder work of using JavaScript to build out the elements of the page that would be interactive.
+The portfolio page is far from finished and I have several things I still want to do for it, including a deeper bio, and links to all of my project games that I plan to build into HTML games for added showcase.  

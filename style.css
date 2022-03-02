@@ -3,8 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    text-align: center;
+    background-color: steelblue;
+    color: white;
+    font-size: 20px;
+}
 header {
-    background-color: slateblue;
+    background-color: steelblue;
 }
 a {
     color: rgba(255, 255, 255);
@@ -13,17 +19,19 @@ a {
 #top-nav {
     min-height: 55px;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     padding: 0 24px;
 }
 #nav-ul {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 200px;
     z-index: 2;
+    background-color: steelblue;
 }
 .hamburger{
     position: fixed;
@@ -74,26 +82,96 @@ a {
     
 }
 a:link, a:visited {
-    background-color: darkgrey;
+    background-color: steelblue;
     color: white;
     text-decoration: none;
    
 }
 a:hover, a:active {
-    color: blue ;
+    color: purple ;
 }
 img{
       height: 75px;
       width: 60px;
 }
 header {
-      background-color: slateblue;
-}
-#bio {
       background-color: steelblue;
 }
+#bio {
+    background-color: steelblue;
+}
+.card {
+    margin: 100px auto 0;
+    width: 400px;
+    height: 600px;
+}
+.card_inner {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+.card_inner.is-flipped {
+    transform: rotateY(180deg);
+}
+.card_face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, .2);
+}
+.card_face--front {
+    background-image: linear-gradient(to bottom right, white, steelblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card_face--front h2 {
+    color: white;
+    font-size: 32px;
+}
+.card_face--back {
+    background-image: linear-gradient(to bottom right, white, steelblue);
+    transform: rotateY(180deg);
+}
+.card_content {
+    width: 100%;
+    height: 100%;
+}
+.card_header {
+    position: relative;
+    padding: 30px 30px 40px;
+}
+.card_header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+    background-color: linear-gradient(to bottom left, white 15%, steelblue 115%);
+}
+.head {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid white;
+    object-fit: cover;
+
+}
 #resume {
-      background-color: blueviolet;
+      background-color: steelblue;
   }
 #projects {
     display: flex;
@@ -154,4 +232,25 @@ header {
 }
 #next {
     right: 1rem;
+}
+.nav-bot {
+    min-height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+    z-index: 2;
+    
+}
+.soc-links {
+    color: rgba(255, 255, 255);
+    list-style: none;
 }
